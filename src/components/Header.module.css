@@ -2,6 +2,46 @@
   height: 20vh;
   background: var(--gray-700);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.header img {
+  width: 7.875rem;
+  height: 3rem;
+}
+
+.createTaskForm {
+  position: absolute;
+  bottom: -1.687rem;
+  display: flex;
+  gap: 0.5rem;
+  width: 90vw;
+  max-width: 46rem;
+}
+
+.createTaskForm input {
+  border-radius: 0.5rem;
+  border: none;
+  height: 3.375rem;
+  background-color: var(--gray-500);
+  width: 86.68%;
+  padding: 1rem;
+  color: var(--gray-100);
+}
+
+.createTaskForm button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  height: 3.375rem;
+  background-color: var(--blue-500);
+  width: 5.625rem;
+  color: var(--gray-100);
+  font-weight: 700;
 }
