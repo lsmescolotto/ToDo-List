@@ -5,7 +5,7 @@ import { PlusCircle } from "phosphor-react";
 export const Header = () => {
   return (
     <header className={styles.header}>
-      <img src={logo} />
+      <img src={logo} alt="ToDo logo" />
       <form className={styles.createTaskForm}>
         <input placeholder="Adicione uma nova tarefa" />
         <button type="submit">
