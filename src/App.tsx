@@ -1,13 +1,11 @@
-import { useState } from "react";
 import Content from "./components/Content";
 import { Header } from "./components/Header";
+import styles from "./App.module.css";
 import "./global.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="App">
+    <div className={styles.appContainer}>
       <Header />
       <Content />
     </div>
