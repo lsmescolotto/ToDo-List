@@ -9,7 +9,7 @@ export const Header = () => {
       <form className={styles.createTaskForm}>
         <input placeholder="Adicione uma nova tarefa" />
         <button type="submit">
-          Criar <PlusCircle size={16} />{" "}
+          Criar <PlusCircle size={20} />
         </button>
       </form>
     </header>
