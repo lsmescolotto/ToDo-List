@@ -32,6 +32,10 @@
   color: var(--gray-100);
 }
 
+.createTaskForm input:focus {
+  border: 1px solid var(--purple-500);
+}
+
 .createTaskForm button {
   display: flex;
   align-items: center;
@@ -44,4 +48,9 @@
   width: 5.625rem;
   color: var(--gray-100);
   font-weight: 700;
+  cursor: pointer;
+}
+
+.createTaskForm button:hover {
+  background-color: var(--blue-300);
 }

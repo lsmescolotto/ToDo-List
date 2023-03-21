@@ -4,10 +4,11 @@ interface TasksCounterProps {
   title: string;
   titleColor: "blue" | "purple";
   countNumber: number;
+  total?: number;
 }
 
 const TasksCounter = (props: TasksCounterProps) => {
-  const { title, titleColor, countNumber } = props;
+  const { title, titleColor, countNumber, total } = props;
 
   return (
     <div className={styles.container}>
@@ -18,7 +19,9 @@ const TasksCounter = (props: TasksCounterProps) => {
       >
         {title}
       </h4>
-      <span className={styles.countNumber}>{countNumber}</span>
+      <span className={styles.countNumber}>
+        {total ? `${countNumber} of ${total}` : countNumber}
+      </span>
     </div>
   );
 };
