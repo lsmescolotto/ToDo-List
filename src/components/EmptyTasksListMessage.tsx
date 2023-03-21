@@ -6,10 +6,10 @@ const EmptyTasksListMessage = () => {
     <div className={styles.container}>
       <img src={clipboard} alt="clipboard icon" />
       <p className={styles.primaryTextMessage}>
-        Você ainda não tem tarefas cadastradas
+        You don't have any registered task
       </p>
       <p className={styles.secondaryTextMessage}>
-        Crie tarefas e organize seus itens a fazer
+        Add tasks and organize your to-dos
       </p>
     </div>
   );
