@@ -20,7 +20,7 @@ const TasksCounter = (props: TasksCounterProps) => {
         {title}
       </h4>
       <span className={styles.countNumber}>
-        {total ? `${countNumber} de ${total}` : countNumber}
+        {total ? `${countNumber} of ${total}` : countNumber}
       </span>
     </div>
   );
