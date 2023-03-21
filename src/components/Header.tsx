@@ -7,9 +7,9 @@ export const Header = () => {
     <header className={styles.header}>
       <img src={logo} alt="ToDo logo" />
       <form className={styles.createTaskForm}>
-        <input placeholder="Adicione uma nova tarefa" />
+        <input placeholder="Create a new task" />
         <button type="submit">
-          Criar <PlusCircle size={20} />
+          Add <PlusCircle size={20} />
         </button>
       </form>
     </header>
