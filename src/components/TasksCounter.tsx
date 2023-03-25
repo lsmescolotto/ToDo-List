@@ -7,7 +7,7 @@ interface TasksCounterProps {
   total?: number;
 }
 
-const TasksCounter = (props: TasksCounterProps) => {
+export const TasksCounter = (props: TasksCounterProps) => {
   const { title, titleColor, countNumber, total } = props;
 
   return (
@@ -25,5 +25,3 @@ const TasksCounter = (props: TasksCounterProps) => {
     </div>
   );
 };
-
-export default TasksCounter;

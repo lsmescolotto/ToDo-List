@@ -1,7 +1,7 @@
 import styles from "./EmptyTasksListMessage.module.css";
 import clipboard from "../assets/Clipboard.png";
 
-const EmptyTasksListMessage = () => {
+export const EmptyTasksListMessage = () => {
   return (
     <div className={styles.container}>
       <img src={clipboard} alt="clipboard icon" />
@@ -14,5 +14,3 @@ const EmptyTasksListMessage = () => {
     </div>
   );
 };
-
-export default EmptyTasksListMessage;
