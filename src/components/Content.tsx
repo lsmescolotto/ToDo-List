@@ -1,42 +1,53 @@
+import { Dispatch, SetStateAction } from "react";
+import { Task } from "../App";
 import styles from "./Content.module.css";
-import EmptyTasksListMessage from "./EmptyTasksListMessage";
-import TaskCardItem from "./TaskCardItem";
-import TasksCounter from "./TasksCounter";
+import { EmptyTasksListMessage } from "./EmptyTasksListMessage";
+import { TaskCardItem } from "./TaskCardItem";
+import { TasksCounter } from "./TasksCounter";
 
-const Content = () => {
+interface ContentProps {
+  tasksList: Task[];
+  setTasksList: Dispatch<SetStateAction<Task[]>>;
+}
+
+export const Content = (props: ContentProps) => {
+  const { tasksList, setTasksList } = props;
+
+  const completedTasksAmount = tasksList.filter(
+    (task) => task.completed
+  ).length;
+
   return (
     <main className={styles.main}>
       <section className={styles.tasksSection}>
         <header className={styles.tasksHeader}>
           <TasksCounter
-            title="Tarefas criadas"
+            title="Created tasks"
             titleColor="blue"
-            countNumber={0}
+            countNumber={tasksList.length}
           />
           <TasksCounter
-            title="Concluídas"
+            title="Completed"
             titleColor="purple"
-            countNumber={0}
+            countNumber={completedTasksAmount}
+            total={tasksList.length > 0 ? tasksList.length : undefined}
           />
         </header>
-        <EmptyTasksListMessage />
-        <TaskCardItem
-          task={{
-            name: "I'm a very very very very very very very cool task",
-            id: "1",
-            completed: false,
-          }}
-        />
-        <TaskCardItem
-          task={{
-            name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            id: "1",
-            completed: true,
-          }}
-        />
+        <div className={styles.tasksContainer}>
+          {tasksList.length <= 0 ? (
+            <EmptyTasksListMessage />
+          ) : (
+            tasksList.map((task) => (
+              <TaskCardItem
+                key={task.id}
+                task={task}
+                tasksList={tasksList}
+                setTasksList={setTasksList}
+              />
+            ))
+          )}
+        </div>
       </section>
     </main>
   );
 };
-
-export default Content;
