@@ -1,11 +1,9 @@
 .card {
-  height: auto;
-  max-height: 4.5rem;
+  height: 4.5rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   border-top: 1px solid var(--gray-400);
-  margin-top: 1.5rem;
   background: var(--gray-500);
   border-radius: 0.5rem;
   padding: 1rem;

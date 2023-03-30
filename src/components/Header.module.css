@@ -54,3 +54,12 @@
 .createTaskForm button:hover {
   background-color: var(--blue-300);
 }
+
+.createTaskForm button:disabled {
+  filter: brightness(0.8);
+  cursor: not-allowed;
+}
+
+.createTaskForm button:disabled:hover {
+  background-color: var(--blue-500);
+}
