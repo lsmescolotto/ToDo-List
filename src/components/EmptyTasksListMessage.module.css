@@ -1,0 +1,23 @@
+.container {
+  height: 15.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--gray-400);
+}
+
+.container img {
+  margin-bottom: 1rem;
+}
+
+.primaryTextMessage {
+  font-weight: 700;
+  color: var(--gray-400);
+  line-height: 140%;
+}
+
+.secondaryTextMessage {
+  color: var(--gray-400);
+  line-height: 140%;
+}

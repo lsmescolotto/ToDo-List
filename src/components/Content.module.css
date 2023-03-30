@@ -1,0 +1,26 @@
+main {
+  height: 80vh;
+}
+
+.tasksSection {
+  max-width: 46rem;
+  width: 90vw;
+  max-height: 75vh;
+  overflow-y: auto;
+  margin: 5rem auto 0 auto;
+}
+
+.tasksHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.tasksContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  overflow-y: auto;
+  height: 55vh;
+}
